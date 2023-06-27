@@ -1,0 +1,29 @@
+[
+  {
+    "ActionType": "LoadFromODBC",
+    "ConnectionName": "Db1",
+    "OutputName": "WORKTABLE1",
+    "SqlTextLines": [
+      "SELECT ...",
+      ""
+    ],
+    "SqlParameterList": [
+      {
+        "DataType": "Date",
+        "Name": "STDT",
+        "Value": "@ARGS1"
+      },
+      {
+        "DataType": "Date",
+        "Name": "EDDT",
+        "Value": "@ARGS2"
+      }
+    ]
+  },
+  {
+    "ActionType": "WriteToCsvFile",
+    "SourceName": "WORKTABLE1",
+    "FileName": "out.csv"
+
+  }
+]
